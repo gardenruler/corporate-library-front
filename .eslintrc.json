@@ -30,7 +30,11 @@
       "react/jsx-filename-extension": 0,
       "react/jsx-one-expression-per-line": 0,
       "no-nested-ternary": 0,
-      "react/function-component-definition":0
+      "react/function-component-definition":0,
+      "import/resolver": {
+        "typescript": {}
+      },
+      "react/jsx-props-no-spreading": "off"
     },
     "globals": {
       "React": "writable"
