@@ -8,7 +8,7 @@ export interface PersonType {
 
 export default function getPerson(
   req: NextApiRequest,
-  res: NextApiResponse<PersonType>
+  res: NextApiResponse<PersonType>,
 ) {
   res.status(200).json({ id: '1', name: 'John Doe', age: 25 });
 }

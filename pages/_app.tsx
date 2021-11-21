@@ -21,7 +21,7 @@ queryClient.setDefaultOptions({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <Hydrate state={pageProps.dehydratedState}>
+      <Hydrate state={dehydratedState}>
         <RecoilRoot>
           <Component {...pageProps} />
           <ReactQueryDevtools initialIsOpen={false} />
