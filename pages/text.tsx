@@ -13,9 +13,9 @@ function Text() {
   return (
     <div>
       <h1>Recoil Test page입니다.</h1>
-      <input type='text' value={text} onChange={onChange} />
+      <input type="text" value={text} onChange={onChange} />
       <p>
-        입력 텍스트: {text} <br/>
+        입력 텍스트: {text} <br />
         입력 텍스트 길이: {count}
       </p>
     </div>
