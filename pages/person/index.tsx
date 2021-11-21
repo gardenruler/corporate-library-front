@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { useQuery, useQueryClient, UseQueryResult } from 'react-query';
+import { useQuery, UseQueryResult } from 'react-query';
 import axios from 'axios';
 
 export interface PersonType {
@@ -11,6 +10,7 @@ export interface PersonType {
 const PersonPage = () => {
   const { isLoading, isError, error, data }: UseQueryResult<PersonType, Error> =
     useQuery<PersonType, Error>('person', async () => {
+      // eslint-disable-next-line no-return-await
       return await axios.get('/api/person').then((res) => res.data);
     });
 
@@ -25,9 +25,6 @@ const PersonPage = () => {
 
   return (
     <>
-      <Link href='/'>
-        <a>Home</a>
-      </Link>
       <h1>Person component</h1>
       <p>
         id: {data?.id} / name: {data?.name} / age: {data?.age}
