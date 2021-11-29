@@ -15,3 +15,8 @@ yarn build
 yarn start   
 
 ```
+
+<br/>
+
+### System Requirements
+- Node.js 16
