@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { textState } from '../recoil/atoms';
 import { charCountState } from '../recoil/selectors';
