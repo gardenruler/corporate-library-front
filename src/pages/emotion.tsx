@@ -6,7 +6,7 @@ const Button = styled.button<{ primary?: boolean }>`
   background-color: ${(props) => (props.primary ? 'hotpink' : 'pink')};
   font-size: 24px;
   border-radius: 4px;
-  color: black;
+  color: ${({ theme }) => theme.color.blueGray200};
   font-weight: bold;
   &:hover {
     color: white;
