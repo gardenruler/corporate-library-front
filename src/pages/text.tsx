@@ -1,8 +1,8 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import { useRecoilState, useRecoilValue } from 'recoil';
-import { textState } from '../recoil/atoms';
-import { charCountState } from '../recoil/selectors';
+import { textState } from '../../recoil/atoms';
+import { charCountState } from '../../recoil/selectors';
 
 function Text() {
   const [text, setText] = useRecoilState(textState);
@@ -11,7 +11,6 @@ function Text() {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setText(event.target.value);
   };
-
   return (
     <div>
       <h1>Recoil Test page입니다.</h1>

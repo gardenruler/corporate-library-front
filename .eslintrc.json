@@ -1,40 +1,58 @@
 {
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@next/next/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
     },
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "plugin:@next/next/recommended",
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "airbnb",
-      "plugin:prettier/recommended"
-    ],
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2021,
-      "sourceType": "module"
-    },
-    "plugins": ["react", "react-hooks", "prettier"],
-    "rules": {
-      "react/react-in-jsx-scope": 0,
-      "react/prefer-stateless-function": 0,
-      "react/jsx-filename-extension": 0,
-      "react/jsx-one-expression-per-line": 0,
-      "no-nested-ternary": 0,
-      "react/function-component-definition":0,
-      "react/jsx-props-no-spreading": "off"
-    },
-    "globals": {
-      "React": "writable"
+    "import/resolver": {
+      "typescript": {}
     }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "no-nested-ternary": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-props-no-spreading": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  },
+  "globals": {
+    "React": "writable"
   }
+}

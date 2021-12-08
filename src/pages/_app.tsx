@@ -1,4 +1,3 @@
-import '../styles/globals.css';
 import { RecoilRoot } from 'recoil';
 import type { AppProps } from 'next/app';
 import {
@@ -8,6 +7,9 @@ import {
   Hydrate,
 } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import { ThemeProvider } from '@emotion/react';
+import theme from '@src/styles/theme';
+import GlobalStyle from '@src/styles/global';
 
 const queryClient = new QueryClient();
 const dehydratedState = dehydrate(queryClient);
@@ -23,7 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <Hydrate state={dehydratedState}>
         <RecoilRoot>
-          <Component {...pageProps} />
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <Component {...pageProps} />
+          </ThemeProvider>
           <ReactQueryDevtools initialIsOpen={false} />
         </RecoilRoot>
       </Hydrate>
