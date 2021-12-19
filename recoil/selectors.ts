@@ -1,7 +1,7 @@
 import { selector } from 'recoil';
-import { textState } from './atoms';
+import textState from './atoms';
 
-export const charCountState = selector({
+const charCountState = selector({
   key: 'charCountState',
   get: ({ get }) => {
     const text = get(textState);
@@ -9,3 +9,5 @@ export const charCountState = selector({
     return text.length;
   },
 });
+
+export default charCountState;
