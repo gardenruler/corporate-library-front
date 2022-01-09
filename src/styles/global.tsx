@@ -125,6 +125,19 @@ const style = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  html {
+    font-family: 'Public Sans', sans-serif;
+  }
+  html,
+  body,
+  #__next {
+    width: 100%;
+    height: 100%;
+  }
+  a:link {
+    font-weight: bold;
+    text-decoration: none;
+  }
 `;
 
 const GlobalStyle = () => {
