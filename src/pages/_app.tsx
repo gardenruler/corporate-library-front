@@ -8,8 +8,8 @@ import {
 } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { ThemeProvider } from '@emotion/react';
-import theme from '@src/styles/theme';
-import GlobalStyle from '@src/styles/global';
+import theme from '@styles/theme';
+import GlobalStyle from '@styles/global';
 
 const queryClient = new QueryClient();
 const dehydratedState = dehydrate(queryClient);
