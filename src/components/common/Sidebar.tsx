@@ -18,6 +18,7 @@ const SidebarBlock = styled.nav`
 `;
 
 const Menus = styled.ul`
+  margin: 30px 0;
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -46,12 +47,19 @@ const Menu = styled.li<{ selected: boolean }>`
       background-color: ${theme.color.green50};
     `}
 `;
+const Logo = styled.div`
+  padding: 20px 20px 40px 20px;
+  color: ${({ theme }) => theme.color.green500};
+  font-weight: 800;
+  font-size: 1.6rem;
+`;
 
 function Sidebar() {
   const navs = ['dashboard', 'user', 'books', 'login', 'register'];
 
   return (
     <SidebarBlock>
+      <Logo>Okbut</Logo>
       <Menus>
         {navs.map((nav) => (
           <a href={`/${nav}`}>
