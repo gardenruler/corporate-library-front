@@ -1,11 +1,11 @@
 import Layout from '@src/components/common/Layout';
 
-function Home() {
+function Dashboard() {
   return (
     <Layout>
-      <div> index </div>
+      <div> dashboard </div>
     </Layout>
   );
 }
 
-export default Home;
+export default Dashboard;

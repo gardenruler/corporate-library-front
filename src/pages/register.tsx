@@ -1,11 +1,11 @@
 import Layout from '@src/components/common/Layout';
 
-function Home() {
+function Register() {
   return (
     <Layout>
-      <div> index </div>
+      <div> register </div>
     </Layout>
   );
 }
 
-export default Home;
+export default Register;

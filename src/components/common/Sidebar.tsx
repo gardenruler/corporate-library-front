@@ -13,7 +13,7 @@ const SidebarBlock = styled.nav`
   flex-direction: column;
   height: 100vh;
   z-index: 1200;
-  border-right: 1px solid ${({ theme }) => theme.color.blueGray300};
+  border-right: 1px solid ${({ theme }) => theme.color.blueGray100};
   background-color: ${({ theme }) => theme.color.white};
 `;
 
