@@ -138,6 +138,14 @@ const style = css`
     font-weight: bold;
     text-decoration: none;
   }
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+  }
 `;
 
 const GlobalStyle = () => {
