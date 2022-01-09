@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { useRouter } from 'next/router';
 
 const SidebarBlock = styled.nav`
   @media (min-width: 1200px) {
@@ -55,15 +56,16 @@ const Logo = styled.div`
 `;
 
 function Sidebar() {
-  const navs = ['dashboard', 'user', 'books', 'login', 'register'];
+  const router = useRouter();
+  const navs = ['dashboard', 'users', 'books', 'login', 'register'];
 
   return (
     <SidebarBlock>
       <Logo>Okbut</Logo>
       <Menus>
         {navs.map((nav) => (
-          <a href={`/${nav}`}>
-            <Menu selected={nav === 'user'}>
+          <a key={nav} href={`/${nav}`}>
+            <Menu selected={`/${nav}` === router.pathname}>
               <div>{nav}</div>
             </Menu>
           </a>
