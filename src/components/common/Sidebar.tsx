@@ -41,6 +41,7 @@ const Menu = styled.li<{ selected: boolean }>`
     selected &&
     css`
       color: ${theme.color.green500};
+      border-right: 2px solid ${theme.color.green500};
       font-weight: 600;
       background-color: ${theme.color.green50};
     `}
