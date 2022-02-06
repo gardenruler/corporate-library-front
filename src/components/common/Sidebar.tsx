@@ -2,6 +2,8 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { useRouter } from 'next/router';
 
+import Logo from './Logo';
+
 const SidebarBlock = styled.nav`
   @media (min-width: 1200px) {
     display: block;
@@ -48,11 +50,9 @@ const Menu = styled.li<{ selected: boolean }>`
       background-color: ${theme.color.green50};
     `}
 `;
-const Logo = styled.div`
+
+const LogoBlock = styled.div`
   padding: 20px 20px 40px 20px;
-  color: ${({ theme }) => theme.color.green500};
-  font-weight: 800;
-  font-size: 1.6rem;
 `;
 
 function Sidebar() {
@@ -61,7 +61,9 @@ function Sidebar() {
 
   return (
     <SidebarBlock>
-      <Logo>Okbut</Logo>
+      <LogoBlock>
+        <Logo />
+      </LogoBlock>
       <Menus>
         {navs.map((nav) => (
           <a key={nav} href={`/${nav}`}>
